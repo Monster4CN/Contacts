@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.android.contacts"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+    }
+    sourceSets.main {
+        java.srcDirs = ['Contacts/src', 'Contacts/src-bind', 'PhoneCommon/src', 'Vcard/java']
+        manifest.srcFile 'Contacts/AndroidManifest.xml'
+        res.srcDirs = ['Contacts/res']
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard.flags'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:palette-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    // must be 18.0, else erro
+    implementation 'com.google.guava:guava:18.0'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.10.8'
+    implementation 'com.googlecode.libphonenumber:geocoder:2.114'
+    implementation ('com.google.code.findbugs:findbugs:3.0.1') {exclude group: 'org.ow2.asm'}
+}

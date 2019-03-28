@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.googlecode.libphonenumber:geocoder:2.114@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/geocoder/2.114/c7a79ffcc05b7f5927eb26db5895cc76d41f244e/geocoder-2.114.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/geocoder/2.114/27550a4fc71eca16caba7267cca4115cbee910f2/geocoder-2.114-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
